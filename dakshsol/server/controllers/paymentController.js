@@ -45,6 +45,8 @@ export const createOrder = async (req, res) => {
 // ✅ Verify Payment (for both localhost + production)
 export const verifyPayment = async (req, res) => {
   try {
+  console.log('API Base URL:', process.env.REACT_APP_API_URL);
+
     const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
 
     // NOTE: This signature verification step is correct.
