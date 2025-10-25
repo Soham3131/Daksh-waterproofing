@@ -28,7 +28,7 @@ import j from "../assets/j.jpg"; // Dummy image for informational slides
 
 import axios from "../api/axiosInstance";
 
-    const { data } = await axios.get("/services");
+    
 // Custom CSS for text shadow on the hero section for better readability
 const textShadowStyle = {
     textShadow: '0 0 15px rgba(0, 0, 0, 1)', 
@@ -54,22 +54,21 @@ const Home = () => {
 
 
 
-    useEffect(() => {
-        const fetchServices = async () => {
-            try {
-                await new Promise(resolve => setTimeout(resolve, 500)); 
-                // Assuming the API returns a 'name' field for the service
-                const { data } = await axios.get(API_URL);
-                setServices(Array.isArray(data) ? data : []); 
-                setLoading(false);
-            } catch (err) {
-                console.error("Error fetching services:", err);
-                setError("Failed to load services. Please try again later.");
-                setLoading(false);
-            }
-        };
-        fetchServices();
-    }, []);
+  useEffect(() => {
+    const fetchServices = async () => {
+        try {
+            await new Promise(resolve => setTimeout(resolve, 500)); // optional delay
+            const { data } = await axios.get("/services");
+            setServices(Array.isArray(data) ? data : []);
+        } catch (err) {
+            console.error("Error fetching services:", err);
+            setError("Failed to load services. Please try again later.");
+        } finally {
+            setLoading(false);
+        }
+    };
+    fetchServices();
+}, []);
 
     // Function to get the correct icon component based on service name
     const getServiceIcon = (serviceName) => {
