@@ -49,8 +49,7 @@ const Home = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    // Placeholder: Replace with your actual deployed API URL
-    // const API_URL = "http://localhost:5000/api/services"; 
+
 
 
 
@@ -122,7 +121,7 @@ const Home = () => {
                                 style={{ backgroundImage: `url(${slide.url})` }}
                             >
                                 {/* Image Overlay: Default hero overlay remains darker for text contrast */}
-                                <div className="absolute inset-0 bg-blue-900 bg-opacity-60"></div> 
+                                <div className="absolute inset-0 bg-blue-900 bg-opacity-40"></div> 
                             </div>
                         </SwiperSlide>
                     ))}
@@ -223,7 +222,7 @@ const Home = () => {
                             to="/services"
                             className="text-xl font-bold text-white bg-blue-700 py-3 px-8 rounded-lg hover:bg-blue-800 transition-all shadow-lg"
                         >
-                            View All Services (10+) →
+                            View All Services →
                         </Link>
                     </div>
                 </div>
@@ -262,7 +261,7 @@ const Home = () => {
                                         style={{ backgroundImage: `url(${slide.imageUrl || d})` }}
                                     >
                                         {/* FIX: Reduced Blue Tint from bg-opacity-60 to bg-opacity-40 */}
-                                        <div className="absolute inset-0 bg-blue-900 bg-opacity-40 transition-opacity group-hover:bg-opacity-50"></div>
+                                        <div className="absolute inset-0 bg-blue-900 bg-opacity-30 transition-opacity group-hover:bg-opacity-40"></div>
                                     </div>
 
                                     <div className="relative z-10 flex flex-col items-center justify-center h-full w-full px-4">

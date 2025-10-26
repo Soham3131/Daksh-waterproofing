@@ -24,7 +24,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <main className="pt-20 min-h-[80vh]">
+      <main className="pt-[70px] min-h-[80vh]">
  {/* Ensure content pushes footer down */}
         <Routes>
           {/* Public Routes - Accessible to all */}
