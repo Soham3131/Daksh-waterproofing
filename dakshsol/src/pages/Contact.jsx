@@ -13,7 +13,7 @@ const Contact = () => {
     }
 
     const message = `Hello, my name is ${name}. I have a query: ${query}`;
-    const whatsappNumber = "918950507450"; // 91 + mobile number
+    const whatsappNumber = "919910235720"; // 91 + mobile number
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
       message
     )}`;
@@ -31,17 +31,17 @@ const Contact = () => {
         <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
           <FaMapMarkerAlt className="text-4xl text-blue-500 mb-4" />
           <h3 className="font-bold mb-2">Address</h3>
-          <p>123, Example Street, Delhi, India</p>
+          <p>Head office: Shop No.4, 1st Floor Gangania Complex, Opp. Metro Piller No.61, MG Road Sikanderpur Gurugram H.R. – 122002</p>
         </div>
         <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
           <FaEnvelope className="text-4xl text-blue-500 mb-4" />
           <h3 className="font-bold mb-2">Email</h3>
-          <p>info@example.com</p>
+          <p>daksh.incon@gmail.com</p>
         </div>
         <div className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
           <FaPhone className="text-4xl text-blue-500 mb-4" />
           <h3 className="font-bold mb-2">Phone</h3>
-          <p>+91 89505 07450</p>
+          <p>+91 9910235720 | 9650687711</p>
         </div>
       </div>
 
